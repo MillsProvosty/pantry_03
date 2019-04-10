@@ -2,9 +2,9 @@ class Ingredient
   attr_reader :name,
               :unit,
               :calories
-  def initialize(ingredient_info)
-    @name = ingredient_info[:name]
-    @unit = ingredient_info[:unit]
-    @calories = ingredient_info[:calories]
+  def initialize(name, unit, calories)
+    @name = name
+    @unit = unit
+    @calories = calories
   end
 end
