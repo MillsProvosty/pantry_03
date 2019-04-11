@@ -6,17 +6,15 @@ class Pantry
   end
 
   def stock_check(ingredient_arg)
-    @stock.each do |key, value|
-      if key == ingredient_arg
-       value
-     else
-        return 0
-      end
-    end
+    @stock[ingredient_arg]
   end
 
   def restock(ingredient_arg, quantity)
     @stock[ingredient_arg] += quantity
+  end
+
+  def enough_ingredients_for?(recipe)
+    recipe.ingredients.length == @stock.length
   end
 
 

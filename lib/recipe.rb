@@ -30,7 +30,7 @@ class Recipe
 
   def total_calories
     all_the_calories = 0
-    @ingredients.each do |key, value|
+    @ingredients.sum do |key, value|
       all_the_calories += key.calories
     end
       all_the_calories
